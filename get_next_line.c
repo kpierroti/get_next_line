@@ -85,7 +85,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	static char	*sbuffer[BUFFER_SIZE];
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, BUFFER_SIZE) < 0)
 		return (NULL);
 	//if (!sbuffer[fd])
 	//	sbuffer[fd] = ft_calloc(1, 1);
